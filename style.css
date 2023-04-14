@@ -1,0 +1,61 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+nav,
+header {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: black;
+}
+
+
+/*---------------------------- HERO -----------------------------------------*/
+
+.hero {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero-txt,
+.hero-img {
+    width: 45%;
+}
+
+.hero-img img {
+    width: 100%;
+}
