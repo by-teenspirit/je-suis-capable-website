@@ -59,3 +59,13 @@ nav a {
 .hero-img img {
     width: 100%;
 }
+
+
+/*---------------------------- CITATION ---------------------------------------------*/
+
+aside {
+    background-color: rgb(37, 37, 37);
+    color: rgb(230, 230, 230);
+    padding: 5%;
+    text-align: center;
+}
