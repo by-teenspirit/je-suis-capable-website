@@ -1,7 +1,95 @@
+:root {
+    --background: #2B2B2B;
+    --background-dark: #232323;
+    --section-bg: #464646;
+    --accent-color-1: #4CA5DC;
+    --accent-color-2: #E94649;
+    --accent-color-3: #F9BB30;
+    --txt-color: #EEEEEE;
+    --font-regular: 'Atkinson Hyperlegible';
+    --font-bold: 'Atkinson Hyperlegible Bold';
+    --font-italic: 'Atkinson Hyperlegible Italic';
+    --font-bold-italic: 'Atkinson Hyperlegible Bold Italic';
+    --h1: 3.812rem;
+    --h2: 3.062rem;
+    --h3: 2.438rem;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 400;
+    src: url('fonts/Atkinson-Hyperlegible-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Bold';
+    font-weight: 700;
+    src: url('fonts/Atkinson-Hyperlegible-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Italic';
+    font-style: italic;
+    src: url('fonts/Atkinson-Hyperlegible-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Bold Italic';
+    font-weight: 700;
+    font-style: italic;
+    src: url('fonts/Atkinson-Hyperlegible-BoldItalic.ttf') format('truetype');
+}
+
+h1 {
+    font-size: 3.812rem;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 3.062rem;
+}
+
+h3 {
+    font-size: 2.438rem;
+}
+
+h4 {
+    font-size: 1.938rem;
+}
+
+h5 {
+    font-size: 1.562rem;
+}
+
+h6 {
+    font-size: 1.250rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+
+/*--------------------------- COMPOSANTS ---------------------------------*/
+
+.btn {
+    background-color: var(--accent-color-1);
+    padding: 8px 35px;
+    border-radius: 100px;
+    font-family: var(--font-bold);
+    color: var(--background);
+}
+
+
+/*------------------------------ GENERAL --------------------------------------*/
+
 body,
 html {
     padding: 0;
     margin: 0;
+    font-family: var(--font-regular), sans-serif;
+    background-color: var(--background);
+    color: var(--txt-color);
 }
 
 nav,
@@ -11,10 +99,14 @@ header {
 
 a {
     text-decoration: none;
+    color: var(--txt-color);
 }
 
+
+/*------------------------------------- NAVBAR ------------------------------*/
+
 nav {
-    background-color: brown;
+    background-color: var(--background-dark);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -25,18 +117,8 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
-}
-
-nav li {
     display: inline-flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-nav a {
-    color: black;
+    gap: 50px;
 }
 
 
@@ -64,8 +146,41 @@ nav a {
 /*---------------------------- CITATION ---------------------------------------------*/
 
 aside {
-    background-color: rgb(37, 37, 37);
-    color: rgb(230, 230, 230);
+    background-color: var(--accent-color-2);
     padding: 5%;
+    text-align: center;
+    font-family: var(--font-bold);
+    font-size: var(--h3);
+}
+
+
+/*----------------------------- JEU INTERACTIF -------------------------*/
+
+.exp-jeu h2 {
+    text-align: center;
+}
+
+.exp-jeu-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.exp-jeu-txt,
+.exp-jeu-img {
+    width: 45%;
+}
+
+.exp-jeu-img img {
+    width: 100%;
+}
+
+
+/*--------------------------- SECTION SPORT -------------------*/
+
+.sport h2 {
     text-align: center;
 }
