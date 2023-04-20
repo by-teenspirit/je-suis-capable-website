@@ -486,6 +486,15 @@ li.yellow-point {
     padding: 2%;
 }
 
+.download-button {
+    display: flex;
+    gap: 10px;
+}
+
+.download-button img {
+    height: 70px;
+}
+
 .download-txt,
 .download-img {
     width: 45%;
