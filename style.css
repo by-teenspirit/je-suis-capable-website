@@ -1,6 +1,7 @@
 :root {
     --background: #2B2B2B;
     --background-dark: #232323;
+    --background-white: #fff;
     --section-bg: #464646;
     --accent-color-1: #4CA5DC;
     --accent-color-2: #E94649;
@@ -13,6 +14,9 @@
     --h1: 3.812rem;
     --h2: 3.062rem;
     --h3: 2.438rem;
+    --h4: 1.938rem;
+    --h5: 1.562rem;
+    --h6: 1.250rem;
 }
 
 @font-face {
@@ -69,6 +73,27 @@ p {
     font-size: 1rem;
 }
 
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 48;
+    font-size: 35px !important;
+}
+
+.bluecard {
+    background-color: var(--accent-color-1);
+}
+
+.yellowcard {
+    background-color: var(--accent-color-3);
+}
+
+.redcard {
+    background-color: var(--accent-color-2);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
 
 /*--------------------------- COMPOSANTS ---------------------------------*/
 
@@ -102,6 +127,10 @@ a {
     color: var(--txt-color);
 }
 
+section {
+    padding: 1%;
+}
+
 
 /*------------------------------------- NAVBAR ------------------------------*/
 
@@ -112,6 +141,8 @@ nav {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -131,6 +162,7 @@ nav ul {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    padding: 1%;
 }
 
 .hero-txt,
@@ -181,6 +213,327 @@ aside {
 
 /*--------------------------- SECTION SPORT -------------------*/
 
+.sport {
+    background-color: var(--section-bg);
+}
+
 .sport h2 {
     text-align: center;
+}
+
+.carousel-container {
+    width: calc(100% - 150px);
+    margin: 50px auto;
+    min-height: 100px;
+    position: relative;
+}
+
+.carousel-container .carousel-inner {
+    overflow: hidden;
+}
+
+.carousel-container .track {
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.carousel-container .card-container {
+    width: calc(100% / 8);
+    flex-shrink: 0;
+    height: 150px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.carousel-container .card-container .card {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.carousel-container .card-container .card .info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.carousel-container .card-container .card .img {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.nav button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--background-white);
+    border: 0;
+    font-size: var(--h4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav .prev {
+    left: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .next {
+    right: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---------------------------------------- OBJECTIFS ------------------------*/
+
+.objectif {
+    padding: 1% 5%;
+}
+
+.objectif h2 {
+    text-align: center;
+}
+
+.obj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+}
+
+.obj-grid-bloc1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.obj-grid-bloc2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.obj-grid-bloc3 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.obj-grid-bloc4 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.obj-grid-bloc5 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.obj-grid-bloc-title h3 {
+    font-size: var(--h6);
+    margin: 0;
+}
+
+.obj-grid-bloc-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.obj-grid-bloc-number {
+    font-size: var(--h3);
+    color: var(--background);
+    border-radius: 10px;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-------------------------------- COMMENT FONCTIONNE L'APP ------------------*/
+
+.works {
+    background-color: var(--section-bg);
+}
+
+.works h2 {
+    text-align: center;
+}
+
+.works-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.works-carousel {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+.works-slider {
+    display: flex;
+    width: 600%;
+    transition: all 0.3s;
+}
+
+.works-slider article {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2%;
+    gap: 30px;
+}
+
+.works-slider article h3 {
+    margin: 0;
+}
+
+.works-carousel ul {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-carousel ul li {
+    margin: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    width: 15%;
+}
+
+.works-carousel ul li.selected {
+    opacity: 1;
+}
+
+.nav .prev-works {
+    left: 0;
+    top: 35%;
+}
+
+.nav .next-works {
+    right: 0;
+    top: 35%;
+}
+
+.blue-point {
+    color: var(--accent-color-1);
+}
+
+li.blue-point {
+    border-bottom: 2px solid var(--accent-color-1);
+    padding-bottom: 5px;
+}
+
+.red-point {
+    color: var(--accent-color-2);
+}
+
+li.red-point {
+    border-bottom: 2px solid var(--accent-color-2);
+    padding-bottom: 5px;
+}
+
+.yellow-point {
+    color: var(--accent-color-3);
+}
+
+li.yellow-point {
+    border-bottom: 2px solid var(--accent-color-3);
+    padding-bottom: 5px;
+}
+
+
+/*----------------------------- DOWNLOAD ---------------------*/
+
+.download {
+    padding: 1%;
+}
+
+.download-container {
+    background-color: var(--section-bg);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.download-txt,
+.download-img {
+    width: 45%;
+}
+
+.download-img img {
+    width: 100%;
+}
+
+
+/*------------------------- FOOTER ---------------------------*/
+
+.footer-top {
+    background-color: var(--section-bg);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-bottom: 2%;
+}
+
+.footer-top h2 {
+    font-size: var(--h5);
+    margin-bottom: 0em;
+}
+
+.footer-top-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-top-content ul li {
+    list-style: none;
+}
+
+.footer-top-content.follow ul {
+    gap: 10px;
+    display: flex;
+}
+
+.footer-btm {
+    background-color: var(--background-dark);
+    text-align: center;
+    padding: 1%;
+}
+
+.footer-btm p {
+    margin: 0;
+}
+
+.footer-btm span {
+    font-family: var(--font-bold);
+    font-size: var(--h6);
 }
