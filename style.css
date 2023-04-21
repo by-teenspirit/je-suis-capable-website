@@ -11,12 +11,18 @@
     --font-bold: 'Atkinson Hyperlegible Bold';
     --font-italic: 'Atkinson Hyperlegible Italic';
     --font-bold-italic: 'Atkinson Hyperlegible Bold Italic';
-    --h1: 3.812rem;
-    --h2: 3.062rem;
-    --h3: 2.438rem;
-    --h4: 1.938rem;
-    --h5: 1.562rem;
-    --h6: 1.250rem;
+    --h1-desktop: 3.812rem;
+    --h2-desktop: 3.062rem;
+    --h3-desktop: 2.438rem;
+    --h4-desktop: 1.938rem;
+    --h5-desktop: 1.562rem;
+    --h6-desktop: 1.250rem;
+    --h1-mobile: 2.000rem;
+    --h2-mobile: 1.812rem;
+    --h3-mobile: 1.625rem;
+    --h4-mobile: 1.438rem;
+    --h5-mobile: 1.250rem;
+    --h6-mobile: 1.125rem;
 }
 
 @font-face {
@@ -161,10 +167,15 @@ nav ul {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 90%;
-    margin: 0 auto;
+    margin: 4% auto;
     padding: 1%;
+}
+
+.hero h1 {
+    margin: 0;
+    padding: 0;
 }
 
 .hero-txt,
@@ -176,6 +187,10 @@ nav ul {
     width: 100%;
 }
 
+a.btn {
+    display: inline-block;
+}
+
 
 /*---------------------------- CITATION ---------------------------------------------*/
 
@@ -184,7 +199,26 @@ aside {
     padding: 5%;
     text-align: center;
     font-family: var(--font-bold);
-    font-size: var(--h3);
+    font-size: var(--h3-desktop);
+}
+
+.quote-top {
+    text-align: left;
+    font-size: var(--h1-desktop);
+    margin-left: -20px;
+    margin-bottom: -25px;
+}
+
+.quote-bottom {
+    text-align: right;
+    font-size: var(--h1-desktop);
+    margin-right: -20px;
+    margin-top: -25px;
+}
+
+.author {
+    text-align: right;
+    font-size: var(--h5-desktop);
 }
 
 
@@ -200,7 +234,7 @@ aside {
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    margin: 0 auto;
+    margin: 4% auto;
 }
 
 .exp-jeu-txt,
@@ -221,6 +255,10 @@ aside {
 
 .sport h2 {
     text-align: center;
+}
+
+.track {
+    width: 150% !important;
 }
 
 .carousel-container {
@@ -276,7 +314,7 @@ aside {
     border-radius: 50%;
     background: var(--background-white);
     border: 0;
-    font-size: var(--h4);
+    font-size: var(--h4-desktop);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -301,6 +339,7 @@ aside {
 
 .objectif {
     padding: 1% 5%;
+    margin: 4% auto;
 }
 
 .objectif h2 {
@@ -314,7 +353,7 @@ aside {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     justify-items: center;
 }
 
@@ -339,7 +378,7 @@ aside {
 }
 
 .obj-grid-bloc-title h3 {
-    font-size: var(--h6);
+    font-size: var(--h6-desktop);
     margin: 0;
 }
 
@@ -351,7 +390,7 @@ aside {
 }
 
 .obj-grid-bloc-number {
-    font-size: var(--h3);
+    font-size: var(--h3-desktop);
     color: var(--background);
     border-radius: 10px;
     font-weight: bold;
@@ -375,7 +414,7 @@ aside {
 
 .works-container {
     width: 90%;
-    margin: 0 auto;
+    margin: 4% auto;
 }
 
 .works-carousel {
@@ -407,7 +446,7 @@ aside {
     position: absolute;
     text-align: center;
     width: 100%;
-    bottom: 20px;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%);
     list-style: none;
@@ -481,7 +520,7 @@ li.yellow-point {
     justify-content: space-around;
     align-items: center;
     width: 70%;
-    margin: 0 auto;
+    margin: 4% auto;
     border-radius: 10px;
     padding: 2%;
 }
@@ -492,12 +531,16 @@ li.yellow-point {
 }
 
 .download-button img {
-    height: 70px;
+    height: 50px;
 }
 
 .download-txt,
 .download-img {
     width: 45%;
+}
+
+.download-txt h2 {
+    margin: 0;
 }
 
 .download-img img {
@@ -516,7 +559,7 @@ li.yellow-point {
 }
 
 .footer-top h2 {
-    font-size: var(--h5);
+    font-size: var(--h5-desktop);
     margin-bottom: 0em;
 }
 
@@ -530,8 +573,16 @@ li.yellow-point {
 }
 
 .footer-top-content.follow ul {
-    gap: 10px;
+    gap: 20px;
     display: flex;
+}
+
+.footer-top-content.follow ul img {
+    width: 40px;
+}
+
+.footer-top-content ul img {
+    width: 150px;
 }
 
 .footer-btm {
@@ -546,5 +597,300 @@ li.yellow-point {
 
 .footer-btm span {
     font-family: var(--font-bold);
-    font-size: var(--h6);
+    font-size: var(--h6-desktop);
+}
+
+
+/*------------------------------- MEDIAS QUERIES -------------------------------*/
+
+
+/* 1024, petit desktop */
+
+@media screen and (max-width: 1024px) {
+    /* section hero */
+    .hero {
+        align-items: center;
+    }
+    .hero-txt {
+        width: 50%;
+    }
+    .hero-img {
+        width: 40%;
+    }
+    /* section objectifs */
+    .obj-grid {
+        grid-column-gap: 30px;
+    }
+    /* section téléchargement */
+    .download-txt {
+        width: 50%;
+    }
+    .download-img {
+        width: 40%;
+    }
+}
+
+
+/* tablette */
+
+@media screen and (max-width: 768px) {
+    /* navbar */
+    nav ul {
+        display: none;
+    }
+    /* hero */
+    .hero h1 {
+        font-size: var(--h1-mobile);
+    }
+    /* citation */
+    .quote-top,
+    .quote-bottom {
+        font-size: var(--h1-mobile);
+    }
+    aside {
+        font-size: var(--h3-mobile)
+    }
+    .author {
+        font-size: var(--h5-mobile)
+    }
+    /* section jeu interactif */
+    .exp-jeu h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    /* section sport */
+    .sport h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    /*section objectifs */
+    .objectif h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .obj-grid-bloc-title h3 {
+        font-size: var(--h6-mobile);
+    }
+    .obj-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .obj-grid-bloc1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .obj-grid-bloc2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .obj-grid-bloc4 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .obj-grid-bloc5 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    /* fonctionnement de l'app */
+    .works h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .works-slider h3 {
+        font-size: var(--h3-mobile);
+    }
+    .works-slider article {
+        align-items: center;
+    }
+    .works-slider .img {
+        width: 40%;
+    }
+    .works-slider .img img {
+        width: 100%;
+    }
+    .works-slider .content {
+        width: 50%;
+    }
+    .works-carousel {
+        height: 100%;
+    }
+    .works-carousel ul {
+        display: none;
+    }
+    .nav .prev-works {
+        left: 0;
+        top: 50%;
+    }
+    .nav .next-works {
+        right: 0;
+        top: 50%;
+    }
+    /* téléchargement */
+    .download-txt h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .download-container {
+        width: 90%;
+    }
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 640px) {
+    /*taille de la police en mobile */
+    h1 {
+        font-size: 2.000rem;
+        line-height: 120%;
+    }
+    h2 {
+        font-size: 1.812rem;
+    }
+    h3 {
+        font-size: 1.625rem;
+    }
+    h4 {
+        font-size: 1.438rem;
+    }
+    h5 {
+        font-size: 1.250rem;
+    }
+    h6 {
+        font-size: 1.125 rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    /* hero */
+    .hero {
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 4% auto;
+        padding: 1%;
+        flex-direction: column;
+        align-content: center;
+        gap: 35px;
+    }
+    .hero-txt,
+    .hero-img {
+        width: 90%;
+    }
+    .hero-txt {
+        display: flex;
+        flex-direction: column;
+    }
+    a.btn {
+        margin: 0 auto;
+    }
+    /* jeu interactif */
+    .exp-jeu-container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .exp-jeu-txt,
+    .exp-jeu-img {
+        width: 90%;
+    }
+    /* sport */
+    .carousel-container {
+        width: calc(100% - 75px);
+    }
+    .carousel-container .card-container {
+        width: calc(100% / 1.3);
+    }
+    /* objectifs */
+    .objectif {
+        margin: 4%;
+    }
+    .obj-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 0fr);
+        grid-row-gap: 20px;
+    }
+    .obj-grid-bloc1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .obj-grid-bloc2 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .obj-grid-bloc3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .obj-grid-bloc4 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .obj-grid-bloc5 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    .obj-grid-bloc {
+        padding: 7%;
+        background-color: var(--background-dark);
+        border-radius: 10px;
+    }
+    .obj-grid-bloc-title h3 {
+        font-size: var(--h5-mobile);
+        text-align: center;
+    }
+    .obj-grid-bloc-number {
+        font-size: var(--h1-mobile);
+    }
+    .obj-grid-bloc-title {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    /* fonctionnement de l'app */
+    .works {
+        padding: 10% 0;
+    }
+    .works-slider article {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .works-slider .img {
+        width: 113%;
+    }
+    .works-slider .content {
+        width: 113%;
+    }
+    .nav .prev-works {
+        left: 0;
+        top: 32%;
+    }
+    .nav .next-works {
+        right: 0;
+        top: 32%;
+    }
+    /* télécharger l'app */
+    .download-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 6% 2%;
+        background-color: transparent;
+    }
+    .download-txt,
+    .download-img {
+        width: 90%;
+    }
+    .download-button {
+        justify-content: center;
+    }
+    .download-button a {
+        width: 50%;
+    }
+    /* footer */
+    .footer-top {
+        flex-direction: column;
+        padding: 5% 10%;
+    }
+    .footer-top-content ul {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-top-content.follow ul {
+        padding: 5% 0 0 0;
+    }
+    .footer-btm {
+        padding: 3%;
+    }
+    .footer-btm span {
+        font-size: var(--h6-mobile);
+    }
 }
