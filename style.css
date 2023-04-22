@@ -278,7 +278,6 @@ aside {
 }
 
 .carousel-container .card-container {
-    width: calc(100% / 8);
     flex-shrink: 0;
     height: 150px;
     padding-right: 15px;
@@ -289,7 +288,6 @@ aside {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border: 1px solid #ccc;
     position: relative;
 }
 
@@ -306,6 +304,13 @@ aside {
 .carousel-container .card-container .card .img {
     border: 1px solid #ccc;
     border-radius: 50%;
+    width: 98%;
+    height: 98%;
+}
+
+.carousel-container .card-container .card .img img {
+    width: 100%;
+    height: 100%;
 }
 
 .nav button {
