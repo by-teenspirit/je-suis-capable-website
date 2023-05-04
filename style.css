@@ -2,6 +2,8 @@
     --background: #2B2B2B;
     --background-dark: #232323;
     --background-white: #fff;
+    --background-dark-blue: #3491CB;
+    --background-dark-yellow: #FFF16F;
     --section-bg: #464646;
     --accent-color-1: #4CA5DC;
     --accent-color-2: #E94649;
@@ -257,62 +259,6 @@ aside {
     text-align: center;
 }
 
-.track {
-    width: 150% !important;
-}
-
-.carousel-container {
-    width: calc(100% - 150px);
-    margin: 50px auto;
-    min-height: 100px;
-    position: relative;
-}
-
-.carousel-container .carousel-inner {
-    overflow: hidden;
-}
-
-.carousel-container .track {
-    display: flex;
-    transition: transform 0.3s;
-}
-
-.carousel-container .card-container {
-    flex-shrink: 0;
-    height: 150px;
-    padding-right: 15px;
-    box-sizing: border-box;
-}
-
-.carousel-container .card-container .card {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.carousel-container .card-container .card .info {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-}
-
-.carousel-container .card-container .card .img {
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    width: 98%;
-    height: 98%;
-}
-
-.carousel-container .card-container .card .img img {
-    width: 100%;
-    height: 100%;
-}
-
 .nav button {
     width: 60px;
     height: 60px;
@@ -337,6 +283,111 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container-sport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px 3%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper span.material-symbols-outlined {
+    background-color: var(--background-white);
+    color: var(--background-dark);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper span.material-symbols-outlined:first-child {
+    left: -22px;
+}
+
+.wrapper span.material-symbols-outlined:last-child {
+    right: -22px;
+}
+
+.wrapper .caroussel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 5) - 13px);
+    gap: 16px;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+}
+
+.caroussel::-webkit-scrollbar {
+    display: none;
+}
+
+ul.caroussel {
+    padding: 0;
+}
+
+.caroussel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--background-dark-blue);
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.caroussel.no-transition {
+    scroll-behavior: auto;
+}
+
+.caroussel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.caroussel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.card .img {
+    background-color: var(--txt-color);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .img img {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-size: var(--h6-desktop);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
 }
 
 
@@ -484,6 +535,15 @@ aside {
     top: 35%;
 }
 
+.white-point {
+    color: var(--txt-color);
+}
+
+li.white-point {
+    border-bottom: 2px solid var(--txt-color);
+    padding-bottom: 5px;
+}
+
 .blue-point {
     color: var(--accent-color-1);
 }
@@ -516,6 +576,7 @@ li.yellow-point {
 
 .download {
     padding: 1%;
+    background-color: var(--background-dark-yellow);
 }
 
 .download-container {
@@ -622,6 +683,10 @@ li.yellow-point {
     .hero-img {
         width: 40%;
     }
+    /*section sport*/
+    .wrapper .caroussel {
+        grid-auto-columns: calc((100% / 3) - 12px);
+    }
     /* section objectifs */
     .obj-grid {
         grid-column-gap: 30px;
@@ -667,6 +732,11 @@ li.yellow-point {
     .sport h2 {
         font-size: var(--h2-mobile);
         margin: 3%;
+    }
+    .card h3 {
+        font-size: var(--h6-mobile);
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     /*section objectifs */
     .objectif h2 {
@@ -794,11 +864,8 @@ li.yellow-point {
         width: 90%;
     }
     /* sport */
-    .carousel-container {
-        width: calc(100% - 75px);
-    }
-    .carousel-container .card-container {
-        width: calc(100% / 1.3);
+    .wrapper .caroussel {
+        grid-auto-columns: 100%;
     }
     /* objectifs */
     .objectif {
