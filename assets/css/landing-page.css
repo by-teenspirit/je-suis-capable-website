@@ -1,0 +1,471 @@
+/*---------------------------- HERO -----------------------------------------*/
+
+.hero {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    margin: 4% auto;
+    padding: 1%;
+}
+
+.hero h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-txt,
+.hero-img {
+    width: 45%;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+a.btn {
+    display: inline-block;
+}
+
+
+/*---------------------------- CITATION ---------------------------------------------*/
+
+aside {
+    background-color: var(--accent-color-2);
+    padding: 5%;
+    text-align: center;
+    font-family: var(--font-bold);
+    font-size: var(--h3-desktop);
+}
+
+.quote-top {
+    text-align: left;
+    font-size: var(--h1-desktop);
+    margin-left: -20px;
+    margin-bottom: -25px;
+}
+
+.quote-bottom {
+    text-align: right;
+    font-size: var(--h1-desktop);
+    margin-right: -20px;
+    margin-top: -25px;
+}
+
+.author {
+    text-align: right;
+    font-size: var(--h5-desktop);
+}
+
+
+/*----------------------------- JEU INTERACTIF -------------------------*/
+
+.exp-jeu h2 {
+    text-align: center;
+}
+
+.exp-jeu-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 4% auto;
+}
+
+.exp-jeu-txt,
+.exp-jeu-img {
+    width: 45%;
+}
+
+.exp-jeu-img img {
+    width: 100%;
+}
+
+
+/*--------------------------- SECTION SPORT -------------------*/
+
+.sport {
+    background-color: var(--section-bg);
+}
+
+.sport h2 {
+    text-align: center;
+}
+
+.nav button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--background-white);
+    border: 0;
+    font-size: var(--h4-desktop);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav .prev {
+    left: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .next {
+    right: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-sport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px 3%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+img#left {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-53%, -50%);
+}
+
+img#right {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-47%, -50%);
+}
+
+.wrapper .icon {
+    background-color: var(--background-white);
+    color: var(--background-dark);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper .icon:first-child {
+    left: -22px;
+}
+
+.wrapper .icon:last-child {
+    right: -22px;
+}
+
+.wrapper .caroussel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 5) - 13px);
+    gap: 16px;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 0;
+}
+
+.caroussel::-webkit-scrollbar {
+    display: none;
+}
+
+ul.caroussel {
+    padding: 0;
+}
+
+.caroussel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--background-dark-blue);
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.caroussel.no-transition {
+    scroll-behavior: auto;
+}
+
+.caroussel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.caroussel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.card .img {
+    background-color: var(--txt-color);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .img img {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.card h3 {
+    font-size: var(--h6-desktop);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+
+/*---------------------------------------- OBJECTIFS ------------------------*/
+
+.objectif {
+    padding: 1% 5%;
+    margin: 4% auto;
+}
+
+.objectif h2 {
+    text-align: center;
+}
+
+.obj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.obj-grid-bloc1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.obj-grid-bloc2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.obj-grid-bloc3 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.obj-grid-bloc4 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.obj-grid-bloc5 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.obj-grid-bloc-title h3 {
+    font-size: var(--h6-desktop);
+    margin: 0;
+}
+
+.obj-grid-bloc-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.obj-grid-bloc-number {
+    font-size: var(--h3-desktop);
+    color: var(--background);
+    border-radius: 10px;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-------------------------------- COMMENT FONCTIONNE L'APP ------------------*/
+
+.works {
+    background-color: var(--section-bg);
+}
+
+.works h2 {
+    text-align: center;
+}
+
+.works-container {
+    width: 90%;
+    margin: 4% auto;
+}
+
+.works-carousel {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+.works-slider {
+    display: flex;
+    width: 600%;
+    transition: all 0.3s;
+}
+
+.works-slider article {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2%;
+    gap: 30px;
+}
+
+.works-slider article h3 {
+    margin: 0;
+}
+
+.works-carousel ul {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-carousel ul li {
+    margin: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    width: 15%;
+}
+
+.works-carousel ul li.selected {
+    opacity: 1;
+}
+
+.nav .prev-works {
+    left: 0;
+    top: 35%;
+}
+
+.nav .next-works {
+    right: 0;
+    top: 35%;
+}
+
+.white-point {
+    color: var(--txt-color);
+}
+
+li.white-point {
+    border-bottom: 2px solid var(--txt-color);
+    padding-bottom: 5px;
+}
+
+.blue-point {
+    color: var(--accent-color-1);
+}
+
+li.blue-point {
+    border-bottom: 2px solid var(--accent-color-1);
+    padding-bottom: 5px;
+}
+
+.red-point {
+    color: var(--accent-color-2);
+}
+
+li.red-point {
+    border-bottom: 2px solid var(--accent-color-2);
+    padding-bottom: 5px;
+}
+
+.yellow-point {
+    color: var(--accent-color-3);
+}
+
+li.yellow-point {
+    border-bottom: 2px solid var(--accent-color-3);
+    padding-bottom: 5px;
+}
+
+
+/*----------------------------- DOWNLOAD ---------------------*/
+
+.download {
+    padding: 1%;
+    background-color: var(--background-dark-yellow);
+}
+
+.download-container {
+    background-color: var(--section-bg);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 4% auto;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.download-button {
+    display: flex;
+    gap: 10px;
+}
+
+.download-button .logo {
+    width: 50%
+}
+
+.download-button img {
+    width: 100%;
+}
+
+.download-txt,
+.download-img {
+    width: 45%;
+}
+
+.download-txt h2 {
+    margin: 0;
+}
+
+.download-img img {
+    width: 100%;
+}
+
+

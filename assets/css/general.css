@@ -1,0 +1,214 @@
+:root {
+    --background: #2B2B2B;
+    --background-dark: #232323;
+    --background-white: #fff;
+    --background-dark-blue: #3491CB;
+    --background-dark-yellow: #FFF16F;
+    --section-bg: #464646;
+    --accent-color-1: #4CA5DC;
+    --accent-color-2: #E94649;
+    --accent-color-3: #F9BB30;
+    --txt-color: #EEEEEE;
+    --font-regular: 'Atkinson Hyperlegible';
+    --font-bold: 'Atkinson Hyperlegible Bold';
+    --font-italic: 'Atkinson Hyperlegible Italic';
+    --font-bold-italic: 'Atkinson Hyperlegible Bold Italic';
+    --h1-desktop: 3.812rem;
+    --h2-desktop: 3.062rem;
+    --h3-desktop: 2.438rem;
+    --h4-desktop: 1.938rem;
+    --h5-desktop: 1.562rem;
+    --h6-desktop: 1.250rem;
+    --h1-mobile: 2.000rem;
+    --h2-mobile: 1.812rem;
+    --h3-mobile: 1.625rem;
+    --h4-mobile: 1.438rem;
+    --h5-mobile: 1.250rem;
+    --h6-mobile: 1.125rem;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    font-weight: 400;
+    src: url('../fonts/Atkinson-Hyperlegible-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Bold';
+    font-weight: 700;
+    src: url('../fonts/Atkinson-Hyperlegible-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Italic';
+    font-style: italic;
+    src: url('../fonts/Atkinson-Hyperlegible-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible Bold Italic';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/Atkinson-Hyperlegible-BoldItalic.ttf') format('truetype');
+}
+
+h1 {
+    font-size: 3.812rem;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 3.062rem;
+}
+
+h3 {
+    font-size: 2.438rem;
+}
+
+h4 {
+    font-size: 1.938rem;
+}
+
+h5 {
+    font-size: 1.562rem;
+}
+
+h6 {
+    font-size: 1.250rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 48;
+    font-size: 35px !important;
+}
+
+.bluecard {
+    background-color: var(--accent-color-1);
+}
+
+.yellowcard {
+    background-color: var(--accent-color-3);
+}
+
+.redcard {
+    background-color: var(--accent-color-2);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+/*--------------------------- COMPOSANTS ---------------------------------*/
+
+.btn {
+    background-color: var(--accent-color-1);
+    padding: 8px 35px;
+    border-radius: 100px;
+    font-family: var(--font-bold);
+    color: var(--background);
+}
+
+
+/*------------------------------ GENERAL --------------------------------------*/
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-regular), sans-serif;
+    background-color: var(--background);
+    color: var(--txt-color);
+}
+
+nav,
+header {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+section {
+    padding: 1%;
+}
+
+/*------------------------------------- NAVBAR ------------------------------*/
+
+nav {
+    background-color: var(--background-dark);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 5px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 50px;
+}
+
+/*------------------------- FOOTER ---------------------------*/
+
+.footer-top {
+    background-color: var(--section-bg);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-bottom: 2%;
+}
+
+.footer-top h2 {
+    font-size: var(--h5-desktop);
+    margin-bottom: 0em;
+}
+
+.footer-top-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-top-content ul li {
+    list-style: none;
+}
+
+.footer-top-content.follow ul {
+    gap: 20px;
+    display: flex;
+}
+
+.footer-top-content.follow ul img {
+    width: 40px;
+}
+
+.footer-top-content ul img {
+    width: 150px;
+}
+
+.footer-btm {
+    background-color: var(--background-dark);
+    text-align: center;
+    padding: 1%;
+}
+
+.footer-btm p {
+    margin: 0;
+}
+
+.footer-btm span {
+    font-family: var(--font-bold);
+    font-size: var(--h6-desktop);
+}

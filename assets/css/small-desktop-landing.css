@@ -1,0 +1,29 @@
+/* 1024, petit desktop */
+
+@media screen and (max-width: 1024px) {
+    /* section hero */
+    .hero {
+        align-items: center;
+    }
+    .hero-txt {
+        width: 50%;
+    }
+    .hero-img {
+        width: 40%;
+    }
+    /*section sport*/
+    .wrapper .caroussel {
+        grid-auto-columns: calc((100% / 3) - 12px);
+    }
+    /* section objectifs */
+    .obj-grid {
+        grid-column-gap: 30px;
+    }
+    /* section téléchargement */
+    .download-txt {
+        width: 50%;
+    }
+    .download-img {
+        width: 40%;
+    }
+}

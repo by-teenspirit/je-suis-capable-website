@@ -1,0 +1,114 @@
+/* tablette */
+
+@media screen and (max-width: 768px) {
+    /* navbar */
+    nav ul {
+        display: none;
+    }
+    /* hero */
+    .hero h1 {
+        font-size: var(--h1-mobile);
+    }
+    /* citation */
+    .quote-top,
+    .quote-bottom {
+        font-size: var(--h1-mobile);
+    }
+    aside {
+        font-size: var(--h3-mobile)
+    }
+    .author {
+        font-size: var(--h5-mobile)
+    }
+    /* section jeu interactif */
+    .exp-jeu h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    /* section sport */
+    section#sport-decouv {
+        margin: 0 30px;
+    }
+    .sport h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .card h3 {
+        font-size: var(--h6-mobile);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /*section objectifs */
+    section#objectifs {
+        margin: 0 35px;
+    }
+    
+    .objectif h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .obj-grid-bloc-title h3 {
+        font-size: var(--h6-mobile);
+    }
+    .obj-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .obj-grid-bloc1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .obj-grid-bloc2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .obj-grid-bloc3 {
+        display: none;
+    }
+    .obj-grid-bloc4 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .obj-grid-bloc5 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    /* fonctionnement de l'app */
+    .works h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .works-slider h3 {
+        font-size: var(--h3-mobile);
+    }
+    .works-slider article {
+        align-items: center;
+    }
+    .works-slider .img {
+        width: 40%;
+    }
+    .works-slider .img img {
+        width: 100%;
+    }
+    .works-slider .content {
+        width: 50%;
+    }
+    .works-carousel {
+        height: 100%;
+    }
+    .works-carousel ul {
+        display: none;
+    }
+    .nav .prev-works {
+        left: 0;
+        top: 50%;
+    }
+    .nav .next-works {
+        right: 0;
+        top: 50%;
+    }
+    /* téléchargement */
+    .download-txt h2 {
+        font-size: var(--h2-mobile);
+        margin: 3%;
+    }
+    .download-container {
+        width: 80%;
+    }
+}
