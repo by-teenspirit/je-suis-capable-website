@@ -161,6 +161,10 @@ nav ul {
     gap: 50px;
 }
 
+nav img{
+    max-width: 30px;
+}
+
 /*------------------------- FOOTER ---------------------------*/
 
 .footer-top {
