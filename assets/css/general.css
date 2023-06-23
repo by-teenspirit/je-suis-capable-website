@@ -25,6 +25,7 @@
     --background-dark-blue: #3491CB;
     --background-dark-yellow: #3491CB;
     --section-bg: #e4e4e4;
+    --footer: #464646;
     --color-btn: linear-gradient(225deg, #F9BB30 0%, #E94649 55.73%, #4CA5DC 100%);
     --accent-color-1: #268BCA;
     --accent-color-2: #BC0D0D;
@@ -39,6 +40,7 @@
     --background-dark-blue: #3491CB;
     --background-dark-yellow: #FFF16F;
     --section-bg: #464646;
+    --footer: #464646;
     --accent-color-1: #4CA5DC;
     --color-btn: #4CA5DC;
     --accent-color-2: #E94649;
@@ -210,6 +212,10 @@ p {
     scroll-behavior: smooth;
 }
 
+/*Scroll reveal */
+html.sr .load-hidden {
+    visibility: hidden;
+}
 
 /*--------------------------- COMPOSANTS ---------------------------------*/
 
@@ -280,11 +286,16 @@ nav img{
 /*------------------------- FOOTER ---------------------------*/
 
 .footer-top {
-    background-color: var(--section-bg);
+    background-color: var(--footer);
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     padding-bottom: 2%;
+    color: var(--txt-color-quote);
+}
+
+.footer-top a{
+    color: var(--txt-color-quote);
 }
 
 .footer-top h2 {

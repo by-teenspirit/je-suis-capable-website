@@ -163,3 +163,25 @@ function changeImage() {
         image.src = "assets/img/assedea-black.png";
     }
 }
+
+// SCROLL REVEAL
+ScrollReveal().reveal('.header', { duration: 2000 });
+
+ScrollReveal().reveal(".scaleUp", {
+    duration: 4000,
+    scale: 0.85
+  });
+  
+ScrollReveal().reveal(".slide-right", {
+    duration: 2000,
+    origin: "left",
+    distance: "300px",
+    easing: "ease-in-out"
+  });
+
+  ScrollReveal().reveal(".slide-left", {
+    duration: 2000,
+    origin: "right",
+    distance: "300px",
+    easing: "ease-in-out"
+  });

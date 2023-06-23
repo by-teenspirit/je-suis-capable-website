@@ -476,12 +476,41 @@ li.yellow-point {
     gap: 10px;
 }
 
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-20px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
 .download-button .logo {
-    width: 50%
+    width: 50%;
 }
 
 .download-button img {
     width: 100%;
+    animation: myAnim 4s ease 0s infinite normal forwards;
 }
 
 .download-txt,
