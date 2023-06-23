@@ -154,3 +154,12 @@ function toggleTheme() {
       document.getElementById('slider').checked = true;
     }
 })();
+
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        image.src = "assets/img/assedea-white.png";
+    } else {
+        image.src = "assets/img/assedea-black.png";
+    }
+}
