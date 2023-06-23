@@ -129,67 +129,28 @@ rightArrow.addEventListener('click', function() {
 });
 
 // SWITCH MODE
-document.body.style="background-color: var(--background-dark);transition: 0.5s;"
-const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
-const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
+ // function to set a given theme/color-scheme
+ function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
 
-var theme = "dark";
-  const root = document.querySelector(":root");
-  const container = document.getElementsByClassName("theme-container")[0];
-  const themeIcon = document.getElementById("theme-icon");
-  container.addEventListener("click", setTheme);
-  function setTheme() {
-    switch (theme) {
-      case "dark":
-        setLight();
-        theme = "light";
-        break;
-      case "light":
-        setDark();
-        theme = "dark";
-        break;
+// function to toggle between light and dark theme
+function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+    } else {
+        setTheme('theme-dark');
     }
-  }
-  function setLight() {
-    root.style.setProperty(
-      "--background-white",
-      "--background-dark"
-    );
-    container.classList.remove("shadow-dark");
-    setTimeout(() => {
-      container.classList.add("shadow-light");
-      themeIcon.classList.remove("change");
-    }, 300);
-    themeIcon.classList.add("change");
-    themeIcon.src = sun;
-  }
-  function setDark() {
-    root.style.setProperty("--background-white", "--background-dark");
-    container.classList.remove("shadow-light");
-    setTimeout(() => {
-      container.classList.add("shadow-dark");
-      themeIcon.classList.remove("change");
-    }, 300);
-    themeIcon.classList.add("change");
-    themeIcon.src = moon;
-  }
+}
 
-  // fusionner les 2
-var toggle = document.getElementById("theme-toggle");
-
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
-    document.documentElement.setAttribute('data-theme', storedTheme)
-
-
-toggle.onclick = function() {
-    var currentTheme = document.documentElement.getAttribute("data-theme");
-    var targetTheme = "light";
-
-    if (currentTheme === "light") {
-        targetTheme = "dark";
+// Immediately invoked function to set the theme on initial load
+(function () {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+        document.getElementById('slider').checked = false;
+    } else {
+        setTheme('theme-light');
+      document.getElementById('slider').checked = true;
     }
-
-    document.documentElement.setAttribute('data-theme', targetTheme)
-    localStorage.setItem('theme', targetTheme);
-};
+})();
